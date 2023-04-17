@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Garbage Identifier using YOLOv5</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="static/images/favicon.ico">
+    <style>
+      .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      /* Darker background on mouse-over */
+      .btn:hover {
+        background-color: RoyalBlue;
+      }
+    </style>
+	</head>
+
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="templates/index.html">[[Business Name]]</h1>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+          		<br>
+				<h2>Identifying Garbage Type</h2>
+				<p></p>
+				<ul class="actions special">
+					<li>
+						<a href="#stats" class="button icon solid fa-chevron-down scrolly">Begin</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Main -->
+			<section id="main" class="container">
+				<section class="box special">
+					<header class="major">
+						<h2>Introducing the ultimate product<br />
+							for Identifying Garbage Type
+						</h2>
+						<p></p>
+					</header>
+				</section>
+				<section class="box special features" id="stats">
+					<section>
+						<center>
+							<h3><b>Instructions:</b></h3>
+              <ul>
+                <li>1. Upload the image.</li>
+                <li>2. Click on submit</li>
+              </ul><br>
+              <h3><b>Upload your image here:</b></h3><br>
+              <form method="POST" action="/form" enctype="multipart/form-data">
+                <dl>
+		              <p>
+                    <input type="file" name="file" autocomplete="off" required>
+		              </p>
+                </dl>
+                <dl>
+                  <p>
+                    <a href="#download">
+		                  <input type="submit" class="btn btn-primary rounded-0" value="Submit">
+                    </a>
+	                </p>
+                </dl>
+              </form>
+              <p id="message">
+	              {% with messages = get_flashed_messages() %}
+	                {% if messages %}
+		                <ul class=flashes>
+		                  {% for message in messages %}
+		                    <li>{{ message }}</li>
+		                  {% endfor %}
+		                </ul>
+	                {% endif %}
+	              {% endwith %}
+              </p>
+              <h3><b>Result:</b></h3><br>
+              <dl>
+                <p>
+                  <a href={{results}}>
+                    <button class="btn"><i class="fa fa-download" id="download"></i> Download Report</button>
+                  </a>
+		            </p>
+              </dl>
+						</center>
+					</section>
+				</section>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/NBA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/nba/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/nba/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://watch.nba.com/" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; [[Business Name]]. All rights reserved.</li>
+				</ul>
+			</footer>
+		</div>
+		<!-- Scripts -->
+		<script src="static/assets/js/jquery.min.js"></script>
+		<script src="static/assets/js/jquery.dropotron.min.js"></script>
+		<script src="static/assets/js/jquery.scrollex.min.js"></script>
+		<script src="static/assets/js/browser.min.js"></script>
+		<script src="static/assets/js/breakpoints.min.js"></script>
+		<script src="static/assets/js/util.js"></script>
+		<script src="static/assets/js/main.js"></script>
+	</body>
+</html>
