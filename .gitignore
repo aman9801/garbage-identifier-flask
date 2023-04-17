@@ -131,3 +131,4 @@ dmypy.json
 
 # uploads folder
 static/uploads/
+static/processed/
