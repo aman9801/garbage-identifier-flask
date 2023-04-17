@@ -1,13 +1,12 @@
 # importing the packages
 from flask import Flask, flash, request, redirect, render_template, url_for
-import pandas as pd
 import os
 import time
 import random
 from werkzeug.utils import secure_filename
 import shutil
 from app import app
-from processing_file import read_excel
+
 
 # defining the allowed file extensions
 ALLOWED_EXTENSIONS = set(['JPG','PNG','JPEG','jpg', 'png', 'jpeg'])
